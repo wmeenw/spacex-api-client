@@ -1,20 +1,22 @@
-# Домашнее задание 4 — клиент SpaceX API с кешем
+# Клиент SpaceX API с кешем
 
-Консольное приложение, которое получает данные о запусках SpaceX через HTTP, разбирает JSON и кеширует ответы в файл.
+Домашнее задание 4 курса по Java. Консольное приложение, которое получает данные о запусках SpaceX через HTTP.
 
-- `SpaceXHttpClient` — запросы к API.
-- `JsonParser`, `JsonBuilder` — работа с JSON.
-- `CacheManager` — файловый кеш (`cache/cache_meta.json`).
-- `SpaceXMenu`, `Launch`, `Core` — меню и логика.
-- `src/test` — тесты, тестовые JSON-файлы в `src/test/resources`.
+## Что сделано в качестве ДЗ
 
-> В репозитории папка с кодом называется `hmework4` (без буквы «о») — так она и была в исходной ветке.
+- HTTP-клиент к SpaceX API (`SpaceXHttpClient`).
+- Разбор и формирование JSON без внешних библиотек (`JsonParser`, `JsonBuilder`).
+- Файловый кеш ответов с метаданными (`CacheManager`, `cache/cache_meta.json`).
+- Консольное меню (`SpaceXMenu`) и модель запуска (`Launch`).
+- Юнит-тесты на кеш, JSON и HTTP-клиент (`src/test`) с тестовыми ответами в `src/test/resources`.
 
 ## Сборка и тесты
+
+В репозитории папка с кодом называется `hmework4` (так она и была в исходной ветке).
 
 ```bash
 cd hmework4
 mvn clean test
 ```
 
-Исходный код взят из ветки `homework4` репозитория [wmeenw/JAVAhomework](https://github.com/wmeenw/JAVAhomework).
+Исходный код: ветка `homework4` репозитория [wmeenw/JAVAhomework](https://github.com/wmeenw/JAVAhomework).
